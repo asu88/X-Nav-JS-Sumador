@@ -1,16 +1,23 @@
 
-  function sumar (id) {
-    var element = document.getElementById(id);
+  var sum = function sumaRandom(id, id2){
     
-    var string = element.innerHTML;
-       console.log("array " + string.split("+"));
-    var operador = string.split("+");
-    var resultado = parseInt(operador[0]) + parseInt (operador[1]);
-       console.log(resultado);
-    element.innerHTML = resultado;
-  
+    //num = Math.floor((Math.random() * 10) + 1); 
+    //console.log("rand "+num);
+    var element = document.getElementById(id);
+    var elem2 = document.getElementById(id2);  
+    //var string = element.innerHTML;
+      // console.log("array " + string.split("+"));
+    var operador1 = Math.floor((Math.random() * 10) + 1); 
+    var operador2 = Math.floor((Math.random() * 10) + 1); 
+    var resultado = operador1 +  operador2;
+       //console.log(resultado);
+    
+    element.innerHTML = operador1 + " + "+ operador2 
+    elem2.innerHTML =  " = "+resultado;
+
   }
+   //if ( document.readyState == complete ){
+   		 sum("op","res");
+
+  	//}
   
-  sumar("op");
-  
-  // http://jsfiddle.net ----para editar y ejecutar online javascript
